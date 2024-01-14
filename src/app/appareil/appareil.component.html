@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-body">
+    <li [ngClass]="{'list-group-item' :true ,'list-group-item-success' :status ==='Allumé','list-group-item-danger' :status ==='Eteint' }">
+  <div style="width: 20px; height: 20px; background-color: red;" *ngIf="getStatus() === 'Eteint' " ></div>
+  <h4>{{ name }} -  {{ getStatus() }} </h4>
+  <br>
+  <input type="text" class="form-control" [(ngModel)]='name' />
+  <br>
+<button class="btn btn-success btn-sm" (click)="onAllumer()">Allumer</button>&nbsp;
+<button class="btn btn-danger btn-sm" (click)="onEteint()">Eteint</button>&nbsp;
+</li>
+  </div>
+</div>
+

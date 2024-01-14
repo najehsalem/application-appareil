@@ -1,0 +1,32 @@
+<div class="container pt-5">
+  <div class="row">
+  <div class="col-6">
+
+    <h2>Mes Appareils</h2>
+      <ul class="list-group">
+        <app-my-appareil   *ngFor="let a of apparielList; let i = index"
+        [name]="a.name"
+        [status]="a.staut"
+        [index]="i"
+        ></app-my-appareil>
+
+
+
+
+       <!-- <app-my-appareil name="Machine a laver" status="Eteint"></app-my-appareil>
+        <app-my-appareil name="Tv" status="Allumé"></app-my-appareil>
+        <app-my-appareil name="Climatiseuer" status="Eteint"></app-my-appareil>
+        <app-my-appareil name="Pc" status="Allumé"></app-my-appareil>
+        <app-my-appareil name="Micro  onde" status="Eteint"></app-my-appareil>-->
+
+
+      </ul>
+       <br>
+      <button class="btn  btn-success" [disabled]="!isAuth" (click)="onAlumer()">Alumer tout</button> &nbsp;
+      <button class="btn  btn-danger"(click)="onEtendre() ">Eteindre tout</button> &nbsp;
+      <br> <br>
+     <!-- <app-premier></app-premier> -->
+
+   </div>
+  </div>
+</div>
